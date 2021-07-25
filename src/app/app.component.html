@@ -7,18 +7,17 @@
     <a class="navbar-brand" href="#!">GWU Chapter</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="true" class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li [ngbNavItem]="1" class="nav-item">
           <a ngbNavLink class="nav-link">Home</a>
           <ng-template ngbNavContent>
+            <app-home></app-home>
           </ng-template>
         </li>
         <li [ngbNavItem]="2" class="nav-item">
-          <a ngbNavLink class="nav-link" (click)="test()">Calendar</a>
+          <a ngbNavLink class="nav-link">Calendar</a>
           <ng-template ngbNavContent>
-            <div class="container">
-              <full-calendar [options]="calendarOptions"></full-calendar>
-            </div>
+            <app-calendar></app-calendar>
           </ng-template>
         </li>
         <li [ngbNavItem]="3" class="nav-item">
@@ -37,9 +36,6 @@
     </div>
   </div>
 </nav>
-<!--
-<app-calendar *ngIf="active == 2"></app-calendar>
--->
 
 <div [ngbNavOutlet]="nav" class="mt-2"></div>
 

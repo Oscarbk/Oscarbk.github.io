@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {BlogPost} from "../../modules/BlogPost";
-import {CalendarOptions} from "@fullcalendar/core";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-home',
@@ -10,39 +8,28 @@ import {HttpClient} from "@angular/common/http";
 export class HomeComponent implements OnInit {
   title = 'shpe-website';
   blogPosts: BlogPost[] = [];
-  calendarOptions!: CalendarOptions;
-  Events = [];
 
-  constructor(private httpClient: HttpClient) { }
-
-  onDateClick(res: any) {
-    alert('Clicked on date : ' + res.dateStr)
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.calendarOptions = {
-      initialView: 'dayGridMonth',
-      dateClick: this.onDateClick.bind(this),
-      events: this.Events
-    };
     // TODO: set up blogPosts array to be fetched by api call from firebase
     this.blogPosts = [{
-      imageUrl: "",
-      date: "August 1",
-      title: "Test title",
-      body: "lorem ipsum in here"
+      imageUrl: "assets/images/shpe.png",
+      date: "November 10 - 14",
+      title: "SHPE National Convention",
+      body: "SHPE's National Convention is the largest gathering of Hispanic STEM professionals and students. This year, it will take place in Orlando, Florida. You won't want to miss this amazing opportunity!"
     }, {
-      imageUrl: "",
+      imageUrl: "https://dummyimage.com/700x350/dee2e6/6c757d.jpg",
       date: "August 27",
       title: "Register for thing",
       body: "Register for the upcoming event that is coming"
     }, {
-      imageUrl: "",
+      imageUrl: "https://dummyimage.com/700x350/dee2e6/6c757d.jpg",
       date: "December 12",
       title: "Last Day of Classes",
       body: "Happy holidays"
     }, {
-      imageUrl: "",
+      imageUrl: "https://dummyimage.com/700x350/dee2e6/6c757d.jpg",
       date: "January 15",
       title: "Start of Spring Semester",
       body: "This is a blog post for the first day of the spring semester"

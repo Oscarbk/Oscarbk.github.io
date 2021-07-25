@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 
@@ -25,7 +24,6 @@ FullCalendarModule.registerPlugins([
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
     BlogPostComponent,
     HomeComponent,
