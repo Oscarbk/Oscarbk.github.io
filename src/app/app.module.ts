@@ -14,6 +14,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './pages/home/home.component';
 
 FullCalendarModule.registerPlugins([
   interactionPlugin,
@@ -25,7 +26,8 @@ FullCalendarModule.registerPlugins([
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
