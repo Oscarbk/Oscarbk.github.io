@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   calendarOptions!: CalendarOptions;
   Events = [];
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   onDateClick(res: any) {
     alert('Clicked on date : ' + res.dateStr)

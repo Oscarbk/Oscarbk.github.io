@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BlogPost} from "./modules/BlogPost";
-import {CalendarOptions} from "@fullcalendar/core";
+import {Calendar, CalendarOptions} from "@fullcalendar/core";
 import {HttpClient} from "@angular/common/http";
 
 @Component({
@@ -10,8 +10,11 @@ import {HttpClient} from "@angular/common/http";
 export class AppComponent implements OnInit{
   title = 'shpe-website';
   blogPosts: BlogPost[] = [];
-  calendarOptions!: CalendarOptions;
+  //calendarOptions!: CalendarOptions;
   Events = [];
+  active: any;
+  calendarOptions!: CalendarOptions
+  testvar: string = ""
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,11 +23,6 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
-    this.calendarOptions = {
-      initialView: 'dayGridMonth',
-      dateClick: this.onDateClick.bind(this),
-      events: this.Events
-    };
     // TODO: set up blogPosts array to be fetched by api call from firebase
     this.blogPosts = [{
       imageUrl: "",
@@ -47,5 +45,19 @@ export class AppComponent implements OnInit{
       title: "Start of Spring Semester",
       body: "This is a blog post for the first day of the spring semester"
     }];
+  }
+
+  test() {
+    this.testvar = "clicking on tab"
+    setTimeout(() => {
+
+      this.calendarOptions = {
+      contentHeight: "auto",
+      initialView: 'dayGridMonth',
+      dateClick: this.onDateClick.bind(this),
+      events: this.Events
+    };
+    }, 160);
+
   }
 }
