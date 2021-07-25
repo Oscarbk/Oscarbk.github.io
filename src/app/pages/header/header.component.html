@@ -4,12 +4,36 @@
     <a class="navbar-brand" href="#!">GWU Chapter</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li [ngbNavItem]="1" class="nav-item">
+          <a ngbNavLink class="nav-link">Home</a>
+          <ng-template ngbNavContent>
+            <p>test material</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2" class="nav-item">
+          <a ngbNavLink class="nav-link">About</a>
+          <ng-template ngbNavContent>
+            <p>something else</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3" class="nav-item">
+          <a ngbNavLink class="nav-link">Contact</a>
+          <ng-template ngbNavContent>
+            <p>lorem ipsum</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="4" class="nav-item">
+          <a ngbNavLink class="nav-link">Blog</a>
+          <ng-template ngbNavContent>
+            <p>Final navbar tab</p>
+          </ng-template>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+<!--<pre>Active: {{ active }}</pre>-->
