@@ -7,12 +7,22 @@ import {CalendarOptions} from "@fullcalendar/core";
 })
 export class CalendarComponent implements OnInit {
   calendarOptions!: CalendarOptions;
-  Events = [];
+  Events = [
+    {
+      title: "Classes Start",
+      start: "2021-08-27"
+    },
+    {
+      title: "Orientation",
+      start: "2021-08-27",
+      color: "red"
+    }
+  ];
 
   constructor() { }
 
   onDateClick(res: any) {
-    alert('Clicked on date : ' + res.dateStr)
+    //alert('Clicked on date : ' + res.dateStr)
   }
 
   ngOnInit(): void {
