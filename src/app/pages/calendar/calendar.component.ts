@@ -16,6 +16,11 @@ export class CalendarComponent implements OnInit {
       title: "Orientation",
       start: "2021-08-27",
       color: "red"
+    },
+    {
+      title: "SHPE National Convention",
+      start: "2021-11-10",
+      end: "2021-11-14"
     }
   ];
 
