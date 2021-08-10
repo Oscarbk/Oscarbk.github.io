@@ -15,6 +15,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
+import { NavigationComponent } from './pages/navigation/navigation.component';
 
 FullCalendarModule.registerPlugins([
   interactionPlugin,
@@ -27,7 +28,8 @@ FullCalendarModule.registerPlugins([
     FooterComponent,
     BlogPostComponent,
     HomeComponent,
-    CalendarComponent
+    CalendarComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

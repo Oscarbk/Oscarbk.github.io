@@ -1,0 +1,10 @@
+.btn-img {
+  margin: 8px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-img:hover img {
+  opacity: 0.8;
+}
