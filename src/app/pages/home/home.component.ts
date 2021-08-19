@@ -27,16 +27,10 @@ export class HomeComponent implements OnInit {
       body: "You can sign up to become a mentor and help a mentee navigate through their college classes, possible internships, and support their growth and development.",
       link: "https://docs.google.com/forms/d/e/1FAIpQLSfB2BaFT_nKwb7KkR-i7w4zp1p_4ukBbBFiZKRpCxC_WlkAqA/viewform"
     }, {
-      imageUrl: "https://dummyimage.com/700x350/dee2e6/6c757d.jpg",
-      date: "December 12",
+      imageUrl: "assets/images/shpeJr.jpg",
+      date: "Date TBA",
       title: "SHPE Jr.",
-      body: "TBA",
-      link: ""
-    }, {
-      imageUrl: "https://dummyimage.com/700x350/dee2e6/6c757d.jpg",
-      date: "January 15",
-      title: "Start of Spring Semester",
-      body: "This is a blog post for the first day of the spring semester",
+      body: "Description TBA",
       link: ""
     }];
   }
