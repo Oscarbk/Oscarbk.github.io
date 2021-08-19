@@ -26,19 +26,20 @@ export class CalendarComponent implements OnInit {
 
   constructor() { }
 
-  onDateClick(res: any) {
+  /*onDateClick(res: any) {
     //alert('Clicked on date : ' + res.dateStr)
-  }
+  }*/
 
+  // TODO: Figure out how to safely render calendar component
   ngOnInit(): void {
     setTimeout(() => {
       this.calendarOptions = {
         contentHeight: "auto",
         initialView: 'dayGridMonth',
-        dateClick: this.onDateClick.bind(this),
+        //dateClick: this.onDateClick.bind(this),
         events: this.Events
       };
-    }, 210);
+    }, 250);
 
   }
 

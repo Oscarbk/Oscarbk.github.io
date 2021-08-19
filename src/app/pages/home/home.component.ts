@@ -29,8 +29,8 @@ export class HomeComponent implements OnInit {
     }, {
       imageUrl: "https://dummyimage.com/700x350/dee2e6/6c757d.jpg",
       date: "December 12",
-      title: "Last Day of Classes",
-      body: "Happy holidays",
+      title: "SHPE Jr.",
+      body: "TBA",
       link: ""
     }, {
       imageUrl: "https://dummyimage.com/700x350/dee2e6/6c757d.jpg",
