@@ -9,7 +9,13 @@
     <div class="col-lg-8">
       <!-- Featured blog post-->
       <div class="card mb-4">
-        <a><img class="card-img-top" src="/assets/images/carousel/zoom.jpg" alt="zoom photo" /></a>
+        <ngb-carousel *ngIf="images">
+          <ng-template ngbSlide *ngFor="let image of images">
+            <div class="picsum-img-wrapper">
+              <img class="card-img-top" [src]='image' alt="Random slide">
+            </div>
+          </ng-template>
+        </ngb-carousel>
         <div class="card-body">
           <h2 class="card-title">Welcome to GW SHPE</h2>
           <p class="card-text">We are a student chapter of the Society of Hispanic Professional Engineers, a non-profit

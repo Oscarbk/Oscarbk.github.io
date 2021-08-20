@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BlogPost} from "../../modules/BlogPost";
+import {NgbCarouselConfig} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,14 @@ import {BlogPost} from "../../modules/BlogPost";
 export class HomeComponent implements OnInit {
   title = 'shpe-website';
   blogPosts: BlogPost[] = [];
+  //images = [1055, 194, 368].map((n) => 'https://picsum.photos/id/${n}/900/500');
+  images = ["assets/images/carousel/zoom.jpg"];
+  test =    'assets/images/carousel/zoom.jpg';
 
-  constructor() { }
+  constructor(config: NgbCarouselConfig) {
+    config.showNavigationArrows = false;
+    config.showNavigationIndicators = true;
+  }
 
   ngOnInit(): void {
     // TODO: set up blogPosts array to be fetched by api call from firebase
@@ -30,8 +37,8 @@ export class HomeComponent implements OnInit {
       imageUrl: "assets/images/shpeJr.jpg",
       date: "Date TBA",
       title: "SHPE Jr.",
-      body: "Description TBA",
-      link: ""
+      body: "Networking Night with SHPE Jr @ School Without Walls",
+      link: "https://www.shpe.org/students/junior-chapters"
     }];
   }
 

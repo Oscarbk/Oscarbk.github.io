@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { NavigationComponent } from './pages/navigation/navigation.component';
+import { SpotlightComponent } from './pages/spotlight/spotlight.component';
 
 FullCalendarModule.registerPlugins([
   interactionPlugin,
@@ -29,7 +30,8 @@ FullCalendarModule.registerPlugins([
     BlogPostComponent,
     HomeComponent,
     CalendarComponent,
-    NavigationComponent
+    NavigationComponent,
+    SpotlightComponent
   ],
   imports: [
     BrowserModule,
