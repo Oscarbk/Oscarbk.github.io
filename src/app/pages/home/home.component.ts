@@ -10,9 +10,13 @@ import {NgbCarouselConfig} from "@ng-bootstrap/ng-bootstrap";
 export class HomeComponent implements OnInit {
   title = 'shpe-website';
   blogPosts: BlogPost[] = [];
-  //images = [1055, 194, 368].map((n) => 'https://picsum.photos/id/${n}/900/500');
-  images = ["assets/images/carousel/zoom.jpg"];
-  test =    'assets/images/carousel/zoom.jpg';
+  images = [
+    "assets/images/carousel/zoom.jpg",
+    "assets/images/carousel/zoom1.png",
+    "assets/images/carousel/zoom2.png",
+    "assets/images/carousel/zoom3.png",
+    "assets/images/carousel/zoom4.png"
+  ];
 
   constructor(config: NgbCarouselConfig) {
     config.showNavigationArrows = false;
