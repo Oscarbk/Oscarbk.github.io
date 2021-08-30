@@ -1,0 +1,83 @@
+<!-- Page header with logo and tagline-->
+<header class="py-5 bg-light border-bottom mb-4" style="text-align:center">
+  <img height="150px" src="assets/images/shpeBanner.png" alt="GWU SHPE Banner">
+</header>
+<!-- Page content-->
+<div class="container">
+  <div class="row">
+    <!-- Blog entries-->
+    <div class="col-lg-8">
+      <!-- Featured blog post-->
+      <div class="card mb-4">
+        <ngb-carousel *ngIf="images">
+          <ng-template ngbSlide *ngFor="let image of images">
+            <div class="picsum-img-wrapper">
+              <img class="card-img-top" [src]='image' alt="Random slide">
+            </div>
+          </ng-template>
+        </ngb-carousel>
+        <div class="card-body">
+          <h2 class="card-title">Welcome to GW SHPE</h2>
+          <p class="card-text">We are a student chapter of the Society of Hispanic Professional Engineers, a non-profit
+            organization. SHPE changes lives by empowering the Latinx/Hispanic community to realize its fullest
+            potential to impact the world through STEM awareness, access, support, and development. The George
+            Washington University SHPE chapter strives to promote Hispanics in STEM through professional development
+            and community engagement. We value the experience our members gain and work endlessly to improve the
+            quality of our organization.</p>
+          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf_w_SyvDHfpnO3E_AVGDA9R9VkEycmzLHivfEwliMH1YI5WA/viewform">Read more →</a>
+        </div>
+      </div>
+      <!-- Nested row for non-featured blog posts-->
+      <div class="row">
+        <div class="col-lg-6" *ngFor="let blog of blogPosts">
+          <!-- Blog post-->
+          <app-blog-post [blogPost]="blog"></app-blog-post>
+        </div>
+      </div>
+      <!-- Footer Component was here -->
+    </div>
+    <!-- Side widgets-->
+    <div class="col-lg-4">
+      <!-- Links widget-->
+      <div class="card mb-4">
+        <div class="card-header">Links</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <ul class="list-unstyled mb-0">
+                <li><a href="https://www.shpe.org/membership">SHPE National Membership</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <ul class="list-unstyled mb-0">
+                <li><a href="https://gwu.campuslabs.com/engage/organization/shpe_gw">GW Engage</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Social widget-->
+      <div class="card mb-4">
+        <div class="card-header">Social</div>
+        <div class="card-body">
+          <a class="btn-img" href="https://discord.com/invite/TUH4RvuHF6">
+            <img class="overlay" src="assets/icons/discord.svg" alt="Discord"/>
+          </a>
+          <a class="btn-img" href="https://www.linkedin.com/company/shpegwu">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a class="btn-img" href="https://www.facebook.com/shpe.gwu">
+            <img src="assets/icons/facebook.svg" alt="Facebook">
+          </a>
+          <a class="btn-img" href="https://www.instagram.com/shpe_gwu/">
+            <img src="assets/icons/instagram.svg" alt="Instagram">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer-->
+<footer class="py-5 bg-gwu">
+  <div class="container"><p class="m-0 text-center text-white">Copyright &copy; SHPE GWU 2021</p></div>
+</footer>
